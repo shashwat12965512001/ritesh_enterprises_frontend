@@ -1,6 +1,13 @@
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Card from "@/components/Card";
+
 export default function Home() {
     return (
         <div>
+            {/* Header */}
+            <Header />
+
             {/* Hero Section */}
             <section className="bg-gray-900 text-white py-20 px-6 text-center">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">
@@ -28,30 +35,17 @@ export default function Home() {
             {/* Services Section */}
             <section className="bg-gray-100 py-16 px-6">
                 <div className="max-w-6xl mx-auto">
-                    <h2 className="text-3xl font-bold mb-8 text-center">Our Services</h2>
+                    <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Our Services</h2>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <ServiceCard title="Residential Construction" />
-                        <ServiceCard title="Commercial Projects" />
-                        <ServiceCard title="Renovations & Interiors" />
+                        <Card title="Residential Construction" />
+                        <Card title="Commercial Projects" />
+                        <Card title="Renovations & Interiors" />
                     </div>
                 </div>
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white text-center py-6 mt-10">
-                &copy; {new Date().getFullYear()} Ritesh Enterprises. All rights reserved.
-            </footer>
-        </div>
-    );
-}
-
-function ServiceCard({ title }) {
-    return (
-        <div className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
-            <h3 className="text-xl font-semibold mb-2">{title}</h3>
-            <p className="text-gray-600">
-                High-quality execution using premium materials and skilled workmanship.
-            </p>
+            <Footer />
         </div>
     );
 }
